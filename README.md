@@ -9,6 +9,9 @@
 
 [Download on the App Store](https://apps.apple.com/us/app/iretro/id1557178995)
 
+## vladukha changes:
+Removed sounds of wheel clicking, edited some configurations, added haptic feedback to the wheel, did a few little fixes like playPause double calling when viewing currently playing song but most important to me - added volume slider (yeah yeah i know, its not how it worked on ipod but i dont care).
+
 
 ![alt text](https://firebasestorage.googleapis.com/v0/b/eyemaps-c1b86.appspot.com/o/Group%2016-3.png?alt=media&token=f736333f-615e-44ef-a4eb-6415fad4533e)
 
