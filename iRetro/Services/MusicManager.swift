@@ -9,6 +9,17 @@ import Combine
 import Foundation
 import MediaPlayer
 
+extension MPVolumeView {
+	static func setVolume(_ volume: Float) {
+		let volumeView = MPVolumeView()
+		let slider = volumeView.subviews.first(where: { $0 is UISlider }) as? UISlider
+
+		DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+			slider?.value = volume
+		}
+	}
+}
+
 class MusicManager {
     static let shared = MusicManager()
     private let player: MPMusicPlayerController
@@ -25,6 +36,10 @@ class MusicManager {
     var nowPlayingItem: MPMediaItem? {
         player.nowPlayingItem
     }
+	
+	func setVolume(_ value: Float){
+		MPVolumeView.setVolume(value)
+	}
     
     func play() {
         player.play()

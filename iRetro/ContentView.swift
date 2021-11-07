@@ -26,13 +26,14 @@ struct ContentView: View {
     var body: some View {
         deviceView
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
                     withAnimation(.easeInOut) {
                         fullView = true
+						zoomIn = true
                     }
                 }
             }
-            .onTapGesture(count: 2) { zoomIn.toggle() }
+            //.onTapGesture(count: 2) { zoomIn.toggle() }
     }
 
     private var deviceView: some View {
@@ -41,6 +42,7 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     ClassicDisplay()
                         .matchedGeometryEffect(id: "display", in: namespace)
+					VolumeSlider()
                     ClickWheel()
                         .matchedGeometryEffect(id: "clickwheel", in: namespace)
                 }
