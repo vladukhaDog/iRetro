@@ -12,13 +12,9 @@ import SwiftUI
 class MainMenuViewModel: MenuViewModel, ObservableObject {
     lazy var menuOptions = [
         MenuOption(title: "Music", nextMenu: AnyView(MusicMenu())),
-        MenuOption(title: "Videos", nextMenu: nil),
-        MenuOption(title: "Photos", nextMenu: nil),
-        MenuOption(title: "Podcasts", nextMenu: nil),
-        MenuOption(title: "Extras", nextMenu: nil),
-        MenuOption(title: "Settings", nextMenu: nil),
         MenuOption(title: "Shuffle Songs", nextMenu: nil,
                    withDisclosure: false, onSelect: shuffleAndPlay),
+		MenuOption(title: "Now Playing", nextMenu: nil, onSelect: showNowPlayingView)
     ]
 
     @Published var currentIndex: Int = 0
@@ -59,13 +55,13 @@ class MainMenuViewModel: MenuViewModel, ObservableObject {
     }
 
     func addNowPlayingMenuOption() {
-        if !showsNowPlayingMenuOption {
-            menuOptions.append(
-                MenuOption(title: "Now Playing", nextMenu: nil, onSelect: showNowPlayingView)
-            )
-            showsNowPlayingMenuOption = true
-        }
-        objectWillChange.send()
+       // if !showsNowPlayingMenuOption {
+       //     menuOptions.append(
+       //         MenuOption(title: "Now Playing", nextMenu: nil, onSelect: showNowPlayingView)
+       //     )
+       //     showsNowPlayingMenuOption = true
+       // }
+       // objectWillChange.send()
     }
 
     func removeNowPlayingMenuOption() {

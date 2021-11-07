@@ -10,8 +10,8 @@ import SwiftUI
 
 class MusicMenuViewModel: MenuViewModel, ObservableObject {
     lazy var menuOptions = [
-        MenuOption(title: "Cover Flow", nextMenu: AnyView(Text("Cover Flow"))),
-        MenuOption(title: "Playlists", nextMenu: nil,
+        //MenuOption(title: "Cover Flow", nextMenu: AnyView(Text("Cover Flow"))),
+        MenuOption(title: "Playlists", nextMenu: AnyView(Text("Cover Flow")),
                    withDisclosure: true, onSelect: showPlaylistsListView),
         MenuOption(title: "Artists", nextMenu: nil,
                    withDisclosure: true, onSelect: showArtistsListView),

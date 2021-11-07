@@ -62,9 +62,9 @@ class NowPlayingViewModel: ObservableObject {
     }
 
     func playPauseClick() {
-        Haptics.rigid()
-        ClickWheelService.shared.playTock()
-        MusicManager.shared.playPause()
+        //Haptics.rigid()
+        //ClickWheelService.shared.playTock()
+        //MusicManager.shared.playPause()
     }
 
     func centerClick() {

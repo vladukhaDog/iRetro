@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		617E97F72737DA7900B56A45 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 617E97F62737DA7900B56A45 /* SwiftUIX */; };
+		617E97F92737DAEF00B56A45 /* VolumeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E97F82737DAEF00B56A45 /* VolumeSlider.swift */; };
 		E15F610A25E2E44E00501A13 /* BatteryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F610925E2E44E00501A13 /* BatteryManager.swift */; };
 		E15F612A25E30CD200501A13 /* RoutingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15F612925E30CD200501A13 /* RoutingView.swift */; };
 		EA1E374125E028BB00C88BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1E374025E028BB00C88BAF /* AppDelegate.swift */; };
@@ -68,6 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		617E97F82737DAEF00B56A45 /* VolumeSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeSlider.swift; sourceTree = "<group>"; };
 		E15F610925E2E44E00501A13 /* BatteryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryManager.swift; sourceTree = "<group>"; };
 		E15F612925E30CD200501A13 /* RoutingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingView.swift; sourceTree = "<group>"; };
 		EA1E373D25E028BB00C88BAF /* SwiftUI-Jam-2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Jam-2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +277,7 @@
 		EA1E378C25E0303200C88BAF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				617E97F82737DAEF00B56A45 /* VolumeSlider.swift */,
 				EA1E378D25E0304300C88BAF /* ClickWheel.swift */,
 				EA1E379125E0306400C88BAF /* StatusBar.swift */,
 				EA1E379425E0308900C88BAF /* PlayShape.swift */,
@@ -433,6 +436,7 @@
 				EADBD16325F9BA1D006D48D3 /* Classic.swift in Sources */,
 				EA8F6D9C25E052AE00ED99D4 /* MusicMenuViewModel.swift in Sources */,
 				EA5E76F925E2B456004587E2 /* AlbumsListViewModel.swift in Sources */,
+				617E97F92737DAEF00B56A45 /* VolumeSlider.swift in Sources */,
 				EA1E376725E02B8B00C88BAF /* TextField+ClearButton.swift in Sources */,
 				EA71B0A525E0F64300FCF427 /* DisplayViewModel.swift in Sources */,
 				E15F610A25E2E44E00501A13 /* BatteryManager.swift in Sources */,

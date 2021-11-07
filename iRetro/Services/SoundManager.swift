@@ -7,6 +7,8 @@
 
 import AVFoundation
 
+private let VLADUKHA_PLAY_SOUND = false
+
 class SoundManager {
     static let shared = SoundManager()
     private init() {}
@@ -16,11 +18,11 @@ class SoundManager {
         let fileURL = URL(fileURLWithPath: "/System/Library/Audio/UISounds/nano/TimerWheelMinutesDetent_Haptic.caf") as CFURL
         AudioServicesCreateSystemSoundID(fileURL, &soundID)
         DispatchQueue.main.debounced(target: self, after: 0.025) {
-            AudioServicesPlaySystemSound(soundID)
+			if VLADUKHA_PLAY_SOUND{ AudioServicesPlaySystemSound(soundID)}
         }
     }
 
-    func playTock() {
-        AudioServicesPlaySystemSound(1104)
-    }
+	func playTock() {
+		if VLADUKHA_PLAY_SOUND{ AudioServicesPlaySystemSound(1104)}
+	}
 }
