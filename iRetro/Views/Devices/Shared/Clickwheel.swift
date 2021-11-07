@@ -157,7 +157,7 @@ struct ClickWheel: View {
             }
     }
 
-    private func rotationGesture(for width: CGFloat, with sensitivity: Double = 40) -> some Gesture {
+    private func rotationGesture(for width: CGFloat, with sensitivity: Double = 15) -> some Gesture {
         DragGesture()
             .onChanged { v in
                 // Calc rotation angle
@@ -170,11 +170,16 @@ struct ClickWheel: View {
                 if abs(theta) < CGFloat(sensitivity) {
                     self.counter += theta
                 }
+				
                 // Move menu cursor when the counter become more(less) sensitivity.
                 if self.counter > CGFloat(sensitivity) {
                     ClickWheelService.shared.prevTick.send()
+					let generator = UIImpactFeedbackGenerator(style: .light)
+					generator.impactOccurred(intensity: 0.8)
                 } else if self.counter < -CGFloat(sensitivity) {
                     ClickWheelService.shared.nextTick.send()
+					let generator = UIImpactFeedbackGenerator(style: .light)
+					generator.impactOccurred(intensity: 0.8)
                 }
                 if abs(self.counter) > CGFloat(sensitivity) { self.counter = 0 }
             }
